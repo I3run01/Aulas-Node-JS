@@ -1,0 +1,34 @@
+1º -> Instalar pelo site:
+    https://nodejs.org/en/download/
+
+2º -> Instalar a seguinte exnsão no VS Code
+    Node.js Exec
+
+3º -> Instalar typescript: Termial
+    npm install typescript
+
+4º -> Configuraõa do typescript no projeto: Termial
+    tsc --init
+
+5º -> Em tsconfig
+    Adicionar em modulos
+        "moduleResolution": "node",
+    Habilite o 
+        "outDir": "./caminho da pasta final do projeto",
+        "rootDir" "./caminho da pasta de projeto"
+    
+6º -> Instale a seguinte biblioteca
+    npm install --save @types/node
+
+7º -> Deixe rodando o typescript: No terminal
+    tsc -w
+
+8º -> Para rodar o Node JS usando typescript: No terminal
+    node caminho do arquivo js
+
+9º -> Instalar o package.json: No terminal
+    npm init -y
+
+10º -> Para criar c atalhos para comandos complexos:
+    Em package.json -> "script"
+        "Start" : "node caminho do arquivo js"
