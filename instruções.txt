@@ -44,3 +44,6 @@
 
     Para usar o comando:
         nodemon local-do-arquivo-src -> vai ficar executando o arquivo ts
+
+13º -> Instale o Express
+    npm install express
