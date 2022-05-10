@@ -32,3 +32,15 @@
 10º -> Para criar c atalhos para comandos complexos:
     Em package.json -> "script"
         "Start" : "node caminho do arquivo js"
+
+11º -> Instale a biblioteca nodemon globalmente: No terminal
+    npm install -g nodemon
+
+    Vode pode acessar o nodemon com o seguinte comando
+        nodemon node local do arquivo a ser aberto
+
+12º -> Instale a biblioteca Nodemon para o typescript
+    npm install -g ts-node
+
+    Para usar o comando:
+        nodemon local-do-arquivo-src -> vai ficar executando o arquivo ts
