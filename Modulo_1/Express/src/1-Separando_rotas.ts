@@ -1,5 +1,5 @@
 import express, {Request, Response} from "express";  //Importa o express
-import path from 'path'
+import path from 'path' //caminho da pasta public
 import mainRoutes from './1-routes/index' //Caminho de rotas
 import painelRoutes from './1-routes/painel' //Caminho de rotas
 
