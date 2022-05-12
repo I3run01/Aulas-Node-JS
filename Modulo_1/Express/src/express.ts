@@ -1,4 +1,4 @@
-/*
+
 import express, {Request, Response} from 'express'
 
 const server = express()
@@ -25,5 +25,3 @@ server.listen(3000)
 
 //GET -> manda as informações pela URL
 //POST -> manda as informações internamente
-
-*/
