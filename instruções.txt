@@ -7,7 +7,7 @@
 3º -> Instalar typescript: Termial
     npm install typescript
 
-4º -> Configuraõa do typescript no projeto: Termial
+4º -> Configuração do typescript no projeto: Terminal
     tsc --init
 
 5º -> Em tsconfig
@@ -20,31 +20,28 @@
 6º -> Instale a seguinte biblioteca
     npm install --save @types/node
 
-7º -> Deixe rodando o typescript: No terminal
-    tsc -w
 
-8º -> Para rodar o Node JS usando typescript: No terminal
-    node caminho do arquivo js
-
-9º -> Instalar o package.json: No terminal
+7º -> Instalar o package.json: No terminal
     npm init -y
 
-10º -> Para criar c atalhos para comandos complexos:
-    Em package.json -> "script"
-        "Start" : "node caminho do arquivo js"
-
-11º -> Instale a biblioteca nodemon globalmente: No terminal
+8º -> Instale a biblioteca nodemon globalmente: No terminal
     npm install -g nodemon
 
-    Vode pode acessar o nodemon com o seguinte comando
-        nodemon node local do arquivo a ser aberto
-
-12º -> Instale a biblioteca Nodemon para o typescript
+9º -> Instale a biblioteca Nodemon para o typescript
     npm install -g ts-node
 
-    Para usar o comando:
+    * Para usar o comando:
         nodemon local-do-arquivo-src -> vai ficar executando o arquivo ts
 
-13º -> Instale o Express
+10º -> Instale o Express
+Serve para criar um servidor
     npm install express
     npm install @types/express
+
+11º -> Instalar o Mustache
+    npm install mustache-express
+    npm install --save-dev @types/mustache-express
+
+    Baixe a extensão:
+        Mustache Syntax
+        Mustache Template - Snippets & Autocom
