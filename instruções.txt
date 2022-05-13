@@ -30,9 +30,6 @@
 9º -> Instale a biblioteca Nodemon para o typescript
     npm install -g ts-node
 
-    * Para usar o comando:
-        nodemon local-do-arquivo-src -> vai ficar executando o arquivo ts
-
 10º -> Instale o Express
 Serve para criar um servidor
     npm install express
@@ -45,3 +42,13 @@ Serve para criar um servidor
     Baixe a extensão:
         Mustache Syntax
         Mustache Template - Snippets & Autocom
+
+*Rodar o arquivo: Terminal
+    nodemon -e ts, json, mustache local-do-arquivo
+
+    Para criar um atalho do comando nodemon:
+    No package.json-> script -> Coloque:
+        "start-dev": "comando-para rodar no terminal"
+
+        Para rodar o comando: No terminal:
+            npm run start-dev
