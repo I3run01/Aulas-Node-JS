@@ -9,7 +9,26 @@
 <body>
     <h1>Titulo da pagina</h1>
     <hr>
-    <h1>Opa, tudo bem {user.name}}{, você já tem {{user.age}} ?</h1>
+
+    {{# showold }}
+        Como vai a vida?
+    {{/ showold }}
+
+    <hr>
+
+    <h2>Produtos</h2>
+    <ul>
+        {{# products }}
+            <li> {{title}} - R {{price}} </li>
+        {{/ products }}
+    </ul>
+
+    <ul>
+        {{# FrasesDoDia }}
+            <li> {{.}} </li>
+        {{/ FrasesDoDia }}
+    </ul>
     
+
 </body>
 </html>

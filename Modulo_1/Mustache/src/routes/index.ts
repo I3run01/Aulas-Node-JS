@@ -3,14 +3,31 @@ import { Router, Request, Response } from "express"
 const router = Router()
 
 router.get('/', (req: Request, res: Response )=> {
-    let user = {
-        name: 'Bonieky',
-        age: 90
+    let age: number = 15
+    let showold:boolean = false
+
+    if(age > 50) {
+        showold = true
     }
 
-
     res.render('home', {
-        user
+        showold,
+
+        name: 'Bonieky',
+        lastName: 'Lacerda',
+
+        products: [
+            {title: 'Produto X', price: 10},
+            {title: 'Produto Y', price: 15},
+            {title: 'Produto W', price: 20},
+        ],
+
+        FrasesDoDia: [
+            'Estudar faz bem',
+            'Vivendo e aprendendo',
+            'Sempre em frente'
+        ]
+        
     })
 })
 
