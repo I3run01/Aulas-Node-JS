@@ -11,6 +11,8 @@ server.engine('mustache', mustacheExpress())
 
 server.use(express.static(path.join(__dirname, '../public')))
 
+server.use(express.urlencoded({extended: true}))
+
 server.use(mainRouts)
 
 server.use((req: Request, resp: Response) => {
