@@ -43,6 +43,9 @@ Serve para criar um servidor
         Mustache Syntax
         Mustache Template - Snippets & Autocom
 
+12º -> Instalar o dotenv : Serve para configuração de porta
+    npm install dotenv
+
 *Rodar o arquivo: Terminal
     nodemon -e ts, json, mustache local-do-arquivo
 

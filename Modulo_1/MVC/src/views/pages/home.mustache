@@ -12,10 +12,23 @@
 
     <h2>Produtos</h2>
     <ul>
-        {{# products }}
+        {{# Product }}
             {{>partials/productItem}}
-        {{/ products }}
+        {{/ Product }}
     </ul>
+
+    <hr>
+
+    <h2>Produtos a partir de R$ 12</h2>
+    <ul>
+        {{# expensive }}
+            {{>partials/productItem}}
+        {{/ expensive }}
+    </ul>
+
+    <hr>
+
+    <h2>Frases motivacionais</h2>
 
     <ul>
         {{# FrasesDoDia }}
