@@ -18,7 +18,8 @@ export const idadeAction = (req: Request, res: Response) => {
 
     let mostrarIdade: boolean = false
     let idade: number = 0
-
+    
+    //Se for pela URL -> req.query.nao
     if(req.body.ano) {
         let anoNascimento:number = Number(req.body.ano as string)
         let anoAtual:number = new Date().getFullYear()
