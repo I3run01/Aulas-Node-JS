@@ -1,0 +1,43 @@
+{{>partials/header}}
+
+    {{# showold }}
+        Como vai a vida?
+    {{/ showold }}
+
+    {{^showold}}
+        E ai, novinho?
+    {{/showold}}
+
+    <hr>
+
+    <h2>Produtos</h2>
+    <ul>
+        {{# Product }}
+            {{>partials/productItem}}
+        {{/ Product }}
+    </ul>
+
+    <hr>
+
+    <h2>Produtos a partir de R$ 12</h2>
+    <ul>
+        {{# expensive }}
+            {{>partials/productItem}}
+        {{/ expensive }}
+    </ul>
+
+    <hr>
+
+    <h2>Frases motivacionais</h2>
+
+    <ul>
+        {{# FrasesDoDia }}
+            <li> {{.}} </li>
+        {{/ FrasesDoDia }}
+
+        {{^FrasesDoDia }}
+            Não há frases motivacionais hoje
+        {{/ FrasesDoDia }}
+    </ul>
+
+{{>partials/footer}}
