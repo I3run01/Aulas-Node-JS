@@ -49,6 +49,10 @@ Serve para criar um servidor
 13º -> Instalar o Sequelize : Serve para com promise e Bancps de dados
     npm install --save sequelize
 
+14º -> Instalar o MySQL dentro do script
+    npm install mysql2
+
+
 *Rodar o arquivo: Terminal
     nodemon -e ts, json, mustache local-do-arquivo
 
