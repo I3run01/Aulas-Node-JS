@@ -46,6 +46,9 @@ Serve para criar um servidor
 12º -> Instalar o dotenv : Serve para configuração de porta
     npm install dotenv
 
+13º -> Instalar o Sequelize : Serve para com promise e Bancps de dados
+    npm install --save sequelize
+
 *Rodar o arquivo: Terminal
     nodemon -e ts, json, mustache local-do-arquivo
 
