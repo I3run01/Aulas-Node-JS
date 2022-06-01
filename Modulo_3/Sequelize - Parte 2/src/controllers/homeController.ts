@@ -80,11 +80,30 @@ export const home = async (req: Request, res: Response )=> {
 }
 
 export const exercicio = async (req:Request, res: Response ) => {
+    let users = await User.findAll()
+        
+    res.render('pages/exercicioPreReq',{
+        users
+    })    
+}
+
+
+export const exercicioResponse =async (req:Request, res: Response) => {
+
     let nome: string = req.body.nome as string
     let idade: number = Number(req.body.idade as string)
 
+    let user = User.build({
+        nome: nome,
+        idade: idade
+    })
+    await user.save()
+    
+    let users = await User.findAll()
+
     res.render('pages/exercicio',{
-        nome, idade
+        users
     })
     
 }
+
