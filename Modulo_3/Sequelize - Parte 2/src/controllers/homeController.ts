@@ -130,10 +130,8 @@ export const home = async (req: Request, res: Response )=> {
 export const exercicio = async (req:Request, res: Response ) => {
     let users = await User.findAll()
 
-    Element
-
-    async function  somar(id: string) {
-        let results = await User.findAll({where: {id: id}})
+    async function  somar() {
+        let results = await User.findAll({where: {idade: 90}})
         
         if (results.length >  0) {
             let user = results[0]
