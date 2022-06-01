@@ -3,8 +3,8 @@ import { sequelize } from "../instances/mysql";
 
 export interface UserInstance extends Model {
     id: number
-    name: string
-    age:number
+    nome: string
+    idade:number
 }
 
 export const User = sequelize.define<UserInstance>('User', {
