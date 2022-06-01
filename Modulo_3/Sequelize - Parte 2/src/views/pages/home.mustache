@@ -1,114 +1,27 @@
 {{>partials/header}}
 
-    {{# showold }}
-        Como vai a vida?
-    {{/ showold }}
-
-    {{^showold}}
-        E ai, novinho?
-    {{/showold}}
-
     <hr>
-
-    <h2>Produtos</h2>
-    <ul>
-        {{# Product }}
-            {{>partials/productItem}}
-        {{/ Product }}
-    </ul>
-
-    <hr>
-
-    <h2>Produtos a partir de R$ 12</h2>
-    <ul>
-        {{# expensive }}
-            {{>partials/productItem}}
-        {{/ expensive }}
-    </ul>
-
-    <hr>
-
-    <h2>Frases motivacionais</h2>
-
-    <ul>
-        {{# FrasesDoDia }}
-            <li> {{.}} </li>
-        {{/ FrasesDoDia }}
-
-        {{^FrasesDoDia }}
-            Não há frases motivacionais hoje
-        {{/ FrasesDoDia }}
-    </ul>
-
-    <hr>
-    <h2>Usuários do banco</h2>
+    <h2>Dados do bd</h2>
     <ul>
         {{# user }}
             <li> {{nome}} - {{idade}} </li>
         {{/ user }}
     </ul>
 
-    <h2>Novos dados</h2>
+    <hr>
+    <h2>Pegando dados por ordem alfabetica</h2>
     <ul>
         {{# user02 }}
-        <li> {{nome}} - {{idade}} </li>
+            <li> {{nome}} - {{idade}} </li>
         {{/ user02 }}
     </ul>
 
-    <h2>Novos dados</h2>
+    <hr>
+    <h2>Pegando dados por ordem alfabetica decrescente</h2>
     <ul>
         {{# user03 }}
-        <li> {{nome}}</li>
+            <li> {{nome}} - {{idade}} </li>
         {{/ user03 }}
-    </ul>
-
-    <h2>Nomes = Paulo e tenha 30 anos</h2>
-    <ul>
-        {{# user04 }}
-        <li> {{nome}} - {{idade}} </li>
-        {{/ user04 }}
-    </ul>
-
-    <h2>Se chama Paulo ou tenha 55</h2>
-    <ul>
-        {{# user05 }}
-        <li> {{nome}} - {{idade}} </li>
-        {{/ user05 }}
-    </ul>
-
-    <h2>idade 55 ou 90</h2>
-    <ul>
-        {{# user06 }}
-        <li> {{nome}} - {{idade}} </li>
-        {{/ user06 }}
-    </ul>
-
-    <h2>Maiores que 40 e menores que 70</h2>
-    <ul>
-        {{# user07 }}
-        <li> {{nome}} - {{idade}} </li>
-        {{/ user07 }}
-    </ul>
-
-    <h2>idades que NÃO são 30 e 55</h2>
-    <ul>
-        {{# user08 }}
-        <li> {{nome}} - {{idade}} </li>
-        {{/ user08 }}
-    </ul>
-
-    <h2>Nome que começam com pa</h2>
-    <ul>
-        {{# user09 }}
-        <li> {{nome}} - {{idade}} </li>
-        {{/ user09 }}
-    </ul>
-
-    <h2>Nome com bo em algum lugar do texto</h2>
-    <ul>
-        {{# user10 }}
-        <li> {{nome}} - {{idade}} </li>
-        {{/ user10 }}
     </ul>
 
 {{>partials/footer}}
