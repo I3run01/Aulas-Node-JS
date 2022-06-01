@@ -1,8 +1,57 @@
-import { Request, Response } from "express";
+import { Request, Response, urlencoded } from "express";
 import { User } from "../models/User";
 import { Op } from "sequelize";
 
 export const home = async (req: Request, res: Response )=> {
+    
+    //Deletando registros do banco de dados
+
+    await User.destroy({
+        where: {
+            idade: {
+                [Op.lte]: 18
+            }
+        }
+    })
+
+    //Deletando um item só
+
+    let resultado = await User.findAll({where: {nome: 'Ciclano'}})
+    if (resultado.length > 0 ) {
+        let usuario = resultado[0]
+
+        await usuario.destroy()
+    }
+
+
+    // Atualizando os dados de um usuário específico
+    let result = await User.findAll({ where: {id: 2}})
+    if(result.length > 0) {
+        let usuario = result[0]
+        usuario.idade = 70
+
+        await usuario.save()
+    }
+
+    //Parâmetros da função
+
+    // 1. Dados a serem alterados
+    // 2. Condição para encontrar o(s) utem(ns)
+    
+    await User.update( {idade: 18}, {
+        where: {
+            idade: {
+                [Op.lt]: 18
+            }
+        }
+    })
+
+
+    await User.update({ nome: 'Sr Chico', idade: 56}, {
+        where: {
+            id: 4
+        }
+    })
 
     //Pegando dados no banco de dados por partes
     let user = await User.findAll({
@@ -41,14 +90,15 @@ export const home = async (req: Request, res: Response )=> {
             ['nome', 'asc']
         ]
     })
-
+    
     //bulld + save
+
     let user04 = User.build({
         nome: 'fulalinho',
     })
     await user04.save()
 
-    //Novo exemplo de buld
+    //Novo exemplo de build
     let user06 = User.build({
         nome: 'Beltrano',
     })
@@ -73,14 +123,26 @@ export const home = async (req: Request, res: Response )=> {
         user03
 
     })
-    
-    
-    
+     
 
 }
 
 export const exercicio = async (req:Request, res: Response ) => {
     let users = await User.findAll()
+
+    Element
+
+    async function  somar(id: string) {
+        let results = await User.findAll({where: {id: id}})
+        
+        if (results.length >  0) {
+            let user = results[0]
+            user.idade ++
+
+            await user.save()
+        }
+        
+    }
         
     res.render('pages/exercicioPreReq',{
         users
