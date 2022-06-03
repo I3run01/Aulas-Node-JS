@@ -3,6 +3,29 @@ import { User } from "../models/User";
 import { Op, where } from "sequelize";
 
 export const home = async (req: Request, res: Response )=> {
+    //Métodos finders
+
+    //encontra o primeiro usuário que atenda os requesitos
+    let usuario = await User.findOne({
+        where: {
+            id: 1
+        }
+    })
+
+    //encontra pelo id
+    let usuario02 = await User.findByPk(2)
+
+    const [usurio03, created] = await User.findOrCreate({
+        where: { nome: 'Bonieky'},
+        defaults: {
+            idade: 80
+        }
+    })
+
+
+
+
+
     
     //Deletando registros do banco de dados
 
