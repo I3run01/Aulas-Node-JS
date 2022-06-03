@@ -129,20 +129,8 @@ export const home = async (req: Request, res: Response )=> {
 
 export const exercicio = async (req:Request, res: Response ) => {
     let users = await User.findAll()
-
-    async function  somar() {
-        let results = await User.findAll({where: {idade: 90}})
         
-        if (results.length >  0) {
-            let user = results[0]
-            user.idade ++
-
-            await user.save()
-        }
-        
-    }
-        
-    res.render('pages/exercicioPreReq',{
+    res.render('pages/exercicio',{
         users
     })    
 }
@@ -158,12 +146,22 @@ export const exercicioResponse =async (req:Request, res: Response) => {
         idade: idade
     })
     await user.save()
-    
-    let users = await User.findAll()
 
-    res.render('pages/exercicio',{
-        users
-    })
+    res.redirect('/exercicio')
     
 }
+
+export const exsomar =async (req:Request, res: Response ) => {
+    res.redirect('/exercicio')
+}
+
+export const exdiminuir =async (req:Request, res: Response ) => {
+    res.redirect('/exercicio')
+    
+}
+
+export const exexcluir =async (req:Request, res: Response ) => {
+    res.redirect('/exercicio')
+}
+
 

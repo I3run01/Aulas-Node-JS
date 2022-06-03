@@ -8,8 +8,11 @@ const router = Router()
 
 router.get('/', homeController.home)
 
-router.get('/exercicio', exercicio)
+router.get('/exercicio/:id/somar', homeController.exsomar)
+router.get('/exercicio/:id/diminuir', homeController.exdiminuir)
+router.get('/exercicio/:id/excluir', homeController.exexcluir)
 
+router.get('/exercicio', exercicio)
 router.post('/exercicioResponse', exercicioResponse)
 
 export default router;
