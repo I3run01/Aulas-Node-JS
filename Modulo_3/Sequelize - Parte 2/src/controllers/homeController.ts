@@ -1,6 +1,6 @@
 import { Request, Response, urlencoded } from "express";
 import { User } from "../models/User";
-import { Op } from "sequelize";
+import { Op, where } from "sequelize";
 
 export const home = async (req: Request, res: Response )=> {
     
@@ -152,16 +152,51 @@ export const exercicioResponse =async (req:Request, res: Response) => {
 }
 
 export const exsomar =async (req:Request, res: Response ) => {
+    let id: string = req.params.id
+
+    let results = await User.findAll( {where: {id: id}})
+
+    if (results.length > 0) {
+
+        let user = results[0]
+        user.idade ++
+        
+        await user.save()
+    }
+
     res.redirect('/exercicio')
 }
 
 export const exdiminuir =async (req:Request, res: Response ) => {
+
+    let id:string = req.params.id
+
+    let result = await User.findAll({where: {id:id}})
+
+    if (result.length > 0) {
+        let user = result[0]
+
+        user.idade --
+
+        await user.save()
+    }
+
+
+
+
+
     res.redirect('/exercicio')
     
 }
 
 export const exexcluir =async (req:Request, res: Response ) => {
-    res.redirect('/exercicio')
+    let id:string = req.params.id
+
+    await User.destroy({
+       where: {id:id}
+   })
+
+   res.redirect('/exercicio')
 }
 
 
