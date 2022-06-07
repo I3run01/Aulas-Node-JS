@@ -52,6 +52,14 @@ Serve para criar um servidor
 14º -> Instalar o MySQL dentro do script
     npm install mysql2
 
+15º -> Para trabalhar com noSQL
+    baixe e instale o mongodb: https://www.mongodb.com/try/download/community
+
+    baixe e instale o mondodb compass: https://www.mongodb.com/try/download/compass
+
+16º Baixe o Monngose para poder se conectar ao mondodb
+    npm install mongoose
+    npm install @types/mongoose D
 
 *Rodar o arquivo: Terminal
     nodemon -e ts, json, mustache local-do-arquivo
