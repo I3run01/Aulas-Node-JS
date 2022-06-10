@@ -3,10 +3,10 @@ import { Schema,Model, model, connection } from 'mongoose';
 type UserType = {
     age: number,
     email: string,
-    interests: [string],
+    interests: string[],
     name: {
         firstName: string,
-        lastname: string
+        lastName: string
     }
 };
 
