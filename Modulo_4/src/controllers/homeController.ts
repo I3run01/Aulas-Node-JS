@@ -115,8 +115,8 @@ export const exercicioM4_req =async (req:Request, resp: Response) => {
     let sobrenome: string = req.body.sobrenome as string
     let email: string = req.body.email as string
     let idade: number = Number(req.body.idade as string)
-    let interesses: string = req.body.interesses as string
-    
+    let interesses: string[] = (req.body.interesses as string).split(' ')
+
 
     let user = new User()
     user.name = {
@@ -125,9 +125,10 @@ export const exercicioM4_req =async (req:Request, resp: Response) => {
     }
     user.email = email
     user.age = idade
-    user.interests = [
+    user.interests = interesses
+    await user.save()
 
-    ] 
+
     resp.redirect('/exercicio04')
     
 }
