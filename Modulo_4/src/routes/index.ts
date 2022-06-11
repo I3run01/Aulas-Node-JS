@@ -6,6 +6,7 @@ import * as UserController from '../controllers/userController';
 
 import { exercicio04 } from '../controllers/homeController';
 import { exercicioM4_req } from '../controllers/homeController';
+import { exAddIdade } from '../controllers/homeController';
 
 const router = Router();
 
@@ -20,5 +21,7 @@ router.post('/idade-resultado', UserController.idadeAction);
 
 router.get('/exercicio04', exercicio04)
 router.post('/exercicioM4_req', exercicioM4_req)
+
+router.get('/adicionaridade/:id', exAddIdade)
 
 export default router;

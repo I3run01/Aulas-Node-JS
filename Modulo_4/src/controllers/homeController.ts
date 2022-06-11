@@ -79,6 +79,38 @@ export const home = async (req: Request, res: Response)=>{
     let resultado = await newUser02.save()
 
     console.log(resultado)
+
+    //Atualizar vários dados
+    await User.updateMany(
+        {age: {$lt: 18} }, //parametros
+        {age: 18} //novo valor
+    )
+
+    //Atualizar vários de uma pessoa só
+    await User.updateMany(
+        {email: 'Carlito31@gmail.com' }, //parametros
+        {age: 105} //novo valor
+    )
+
+    //Atualizar vários de uma pessoa só
+    let fulana = await User.findOne({ email: 'fulana@hotmail.com.br'})
+    if(fulana) {
+        fulana.name.firstName = 'Fulana'
+        fulana.name.lastName = 'Tal'
+        fulana.age = 40
+        await fulana.save()
+    } 
+    
+    //Deletando dados do mondoDB
+    await User.findOneAndDelete({ email: 'mono@paris.org'})
+
+    //Deletando dados do mondoDB
+    let Paulo = await User.findOne({email: 'andre@hotmail.com'})
+    if(Paulo) Paulo.remove()
+    
+
+
+
     
     //------------------------------------
 
@@ -131,4 +163,17 @@ export const exercicioM4_req =async (req:Request, resp: Response) => {
 
     resp.redirect('/exercicio04')
     
+}
+
+export const exAddIdade =async (req:Request, resp: Response) => {
+    let id: string = req.params.id as string
+    
+    let user = await User.findOne({_id: id})
+    if(user) {
+        user.age ++
+        user.save()
+    }
+
+
+    resp.redirect('/exercicio04')
 }
