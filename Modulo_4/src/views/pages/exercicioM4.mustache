@@ -1,0 +1,16 @@
+{{>partials/header}}
+
+<form action="/exercicioM4_req" method="post">
+    <h3>Adicionar um novo usuário</h3>
+    <input type="text" name="nome" placeholder="Digite seu nome"><br>
+    <input type="text" name="sobrenome" placeholder="Digite seu sobrenome"><br>
+    <input type="text" name="email" placeholder="Digite seu e-mail"><br>
+    <input type="text" name="idade" placeholder="Digite seu idade"><br>
+    <input type="text" name="interesses" placeholder="Digite seu interesses (separado)"><br>
+    <input type="submit" value="inserir">
+</form>
+
+<h2> Usuários</h2>
+{{# usuario }}
+    <li> {{name.firstName}} - {{age}} </li>
+{{/ usuario }}

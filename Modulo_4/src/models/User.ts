@@ -16,7 +16,7 @@ const schema = new Schema<UserType>({
     interests: [String],
     name: {
         firstName: {type: String, required: true},
-        lastname: String
+        lastName: String
     }
 });
 

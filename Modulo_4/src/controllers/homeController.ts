@@ -80,28 +80,7 @@ export const home = async (req: Request, res: Response)=>{
 
     console.log(resultado)
     
-
-
-    
-
-
-
-
-    
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
+    //------------------------------------
 
     let age: number = 90;
     let showOld: boolean = false;
@@ -122,3 +101,33 @@ export const home = async (req: Request, res: Response)=>{
         frasesDoDia: []
     });
 };
+
+export const exercicio04 =async (req:Request, resp: Response) => {
+    const usuario = await User.find({})
+
+    resp.render('pages/exercicioM4', {
+     usuario
+    })
+}
+
+export const exercicioM4_req =async (req:Request, resp: Response) => {
+    let nome: string = req.body.nome as string
+    let sobrenome: string = req.body.sobrenome as string
+    let email: string = req.body.email as string
+    let idade: number = Number(req.body.idade as string)
+    let interesses: string = req.body.interesses as string
+    
+
+    let user = new User()
+    user.name = {
+        firstName: nome,
+        lastName: sobrenome
+    }
+    user.email = email
+    user.age = idade
+    user.interests = [
+
+    ] 
+    resp.redirect('/exercicio04')
+    
+}
