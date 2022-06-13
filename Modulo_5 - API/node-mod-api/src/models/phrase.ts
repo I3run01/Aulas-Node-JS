@@ -1,21 +1,21 @@
-import {Model, DataTypes} from 'sequelize'
+import { Model, DataTypes} from 'sequelize'
 import { sequelize } from '../instaces/SQL'
 
-export interface PhaseInstance extends Model {
-    id: number,
-    author: string,
+export interface PhraseInstance extends Model {
+    id: number
+    author: string
     txt: string
 }
 
-export const Phrase = sequelize.define<PhaseInstance>('Phrase', {
+export const Phrase = sequelize.define<PhraseInstance>('Phrase', {
     id: {
         primaryKey: true,
         autoIncrement: true,
         type: DataTypes.INTEGER
     },
 
-    author: DataTypes.STRING,
-    txt: DataTypes.STRING
+    author: {type: DataTypes.STRING},
+    txt: {type: DataTypes.STRING}
 }, {
     tableName: 'phrases',
     timestamps: false
