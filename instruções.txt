@@ -61,6 +61,10 @@ Serve para criar um servidor
     npm install mongoose
     npm install @types/mongoose D
 
+17º Cors -> Para criação de API
+    npm install cors
+    npm install -d @types/cors
+
 *Rodar o arquivo: Terminal
     nodemon -e ts, json, mustache local-do-arquivo
 
