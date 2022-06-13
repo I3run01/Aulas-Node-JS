@@ -36,7 +36,7 @@ Serve para criar um servidor
     npm install @types/express
 
 11º -> Instalar o Mustache
-    npm install mustache-express
+    npm  install mustache-express
     npm install --save-dev @types/mustache-express
 
     Baixe a extensão:
