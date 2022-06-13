@@ -65,6 +65,10 @@ Serve para criar um servidor
     npm install cors
     npm install -d @types/cors
 
+18º Para testar as APi's
+    https://web.postman.co
+
+
 *Rodar o arquivo: Terminal
     nodemon -e ts, json, mustache local-do-arquivo
 
