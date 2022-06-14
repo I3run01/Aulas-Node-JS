@@ -68,6 +68,9 @@ Serve para criar um servidor
 18º Para testar as APi's
     https://web.postman.co
 
+17º Status de retorno de API:
+    https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Status
+
 
 *Rodar o arquivo: Terminal
     nodemon -e ts, json, mustache local-do-arquivo

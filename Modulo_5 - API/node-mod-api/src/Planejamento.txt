@@ -1,7 +1,9 @@
-Cruds para APi
+CRUD para APi
 
-POST/frases -> Criar frases novas
-GET/frases
-GET/frase/123
-PUT /frase/123 - Deletar uma frase
-DELETE /frase/123 - Deletar uma frase
+OK - POST/frases -> Criar frases novas
+OK - GET/frases
+OK - GET/frase/123
+OK - PUT /frase/123 - Deletar uma frase
+OK - DELETE /frase/123 - Deletar uma frase
+
+GET /frase/aleatória - Pega uma frase aleatória
