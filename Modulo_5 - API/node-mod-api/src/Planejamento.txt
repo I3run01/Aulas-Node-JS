@@ -6,4 +6,4 @@ OK - GET/frase/123
 OK - PUT /frase/123 - Deletar uma frase
 OK - DELETE /frase/123 - Deletar uma frase
 
-GET /frase/aleatória - Pega uma frase aleatória
+OK - GET /frase/aleatória - Pega uma frase aleatória
