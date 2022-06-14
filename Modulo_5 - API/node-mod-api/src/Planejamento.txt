@@ -3,7 +3,7 @@ CRUD para APi
 OK - POST/frases -> Criar frases novas
 OK - GET/frases
 OK - GET/frase/123
-OK - PUT /frase/123 - Deletar uma frase
+OK - PUT /frase/123 - alterar uma frase
 OK - DELETE /frase/123 - Deletar uma frase
 
 OK - GET /frase/aleatória - Pega uma frase aleatória
