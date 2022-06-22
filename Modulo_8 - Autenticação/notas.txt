@@ -1,0 +1,20 @@
+Auntenticação vs Autorização
+
+    Auntenticação é basicamente o ato de SABER QUEM É que está tentando acessar.
+
+    Autorização é basicamente o ato de verificar se  OBEJETO ou requisitor PODE acessar aquela area especifica
+
+Tipos de Auntenticação
+    -Single-factor Authentication = Autenticação em 1 fator
+    -Two-factor Authentication (2fa) = Autenticação em 2 fatores
+    -Multi-factor Authentication (MFA) = Authentication em multiplos fatores
+    - Single Sign-On (SSO) = Auntenticação única "universal"
+
+Passos de Auntenticação
+    -Basic Auth - BASE64
+    -OAuth (1 e 2)
+    -- OAuth1 = usar um terceiro para gerar um token
+    -- OAuth2 = Refresh + RefreshToken
+    - JWT (Json Web Token)
+
+TOKEN = 123
