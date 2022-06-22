@@ -75,6 +75,10 @@ Serve para criar um servidor
     npm install multer
     npm install -D @types/multer
 
+19º Biblioteca para manipulação de imagens -> Sharp
+    npm install sharp
+    npm install -D @types/sharp
+
 
 *Rodar o arquivo: Terminal
     nodemon -e ts, json, mustache local-do-arquivo

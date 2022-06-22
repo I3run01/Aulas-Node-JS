@@ -1,6 +1,8 @@
+import { unlink } from 'fs/promises';
 import {Request, Response} from 'express'
 import sequelize, { Sequelize } from 'sequelize';
 import { Op, where } from "sequelize";
+import sharp, { Sharp } from 'sharp';
 
 import { Phrase } from '../models/phrase'
 
@@ -83,6 +85,9 @@ export const randomPhrase = async (req:Request, res:Response) => {
 }
 
 export const uploadFile00 =async (req:Request, res: Response) => {
+    //receber o arquivo 
+    // req.file ou req.files
+
     const files = req.files as { 
         avatar: Express.Multer.File[],
         gallary: Express.Multer.File[]
@@ -95,8 +100,26 @@ export const uploadFile00 =async (req:Request, res: Response) => {
 }
 
 export const uploadFile =async (req:Request, res: Response) => {
-    console.log('FILE', req.file)
-    console.log('FILES', req.files)
+
     
-    res.json({})
+    if ( req.file ) {
+        const filename = `${req.file.filename}`
+
+        await sharp(req.file.path) //pega o arquivo
+            .resize(600, 400) //largura //altura
+            .toFormat('jpeg') //formato
+            .toFile(`./public/media/${filename}`) //local correto
+
+        await unlink( req.file.path )
+
+
+    
+        res.json({ image: `${filename}`})
+
+    } else {
+        res.status(400)
+        res.json({error: 'Arquivo inválido'})
+
+    }
 }
+

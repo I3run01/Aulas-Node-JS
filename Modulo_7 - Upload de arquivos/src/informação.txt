@@ -1,0 +1,8 @@
+Não se salva a imagem em um banco de dados, apenas a referência developer
+
+name = bonieky
+age = 90
+
+public/avatar/1234.jpg
+
+http://www.site.com.br/avatar/1234.jpg

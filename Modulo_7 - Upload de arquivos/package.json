@@ -20,6 +20,7 @@
     "pg": "^8.7.1",
     "pg-hstore": "^2.3.4",
     "sequelize": "^6.20.1",
+    "sharp": "^0.30.7",
     "validator": "^13.6.0"
   },
   "devDependencies": {
@@ -28,6 +29,7 @@
     "@types/mustache-express": "^1.2.2",
     "@types/node": "^16.6.1",
     "@types/sequelize": "^4.28.10",
+    "@types/sharp": "^0.30.4",
     "@types/validator": "^13.6.3"
   }
 }
