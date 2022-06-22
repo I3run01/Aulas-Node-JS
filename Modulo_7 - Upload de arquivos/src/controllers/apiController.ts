@@ -81,3 +81,12 @@ export const randomPhrase = async (req:Request, res:Response) => {
     if(phrase) res.json({phrase})
     else res.json({error: 'Não há frases para serem encontradas'})
 }
+
+export const uploadFile =async (req:Request, res: Response) => {
+    const files = req.files as { [fielname: string]: Express.Multer.File[]}
+
+    console.log( 'AVATR',files.avatar)
+    console.log('GALLARY', files.gallary)
+    
+    res.json({})
+}

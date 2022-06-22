@@ -1,0 +1,6 @@
+- O usuário seleciona o arquivo
+- O usuário efetua o envio do arquivo 
+- servidor RECEBE esses bytes, junta tudo e forma novamente o arquivo
+- Manipula o arquivo
+
+

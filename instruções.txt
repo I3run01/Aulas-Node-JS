@@ -71,6 +71,10 @@ Serve para criar um servidor
 17º Status de retorno de API:
     https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Status
 
+18º Biblioteca para Upload -> Multer
+    npm install multer
+    npm install -D @types/multer
+
 
 *Rodar o arquivo: Terminal
     nodemon -e ts, json, mustache local-do-arquivo
