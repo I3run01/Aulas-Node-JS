@@ -82,11 +82,21 @@ export const randomPhrase = async (req:Request, res:Response) => {
     else res.json({error: 'Não há frases para serem encontradas'})
 }
 
-export const uploadFile =async (req:Request, res: Response) => {
-    const files = req.files as { [fielname: string]: Express.Multer.File[]}
+export const uploadFile00 =async (req:Request, res: Response) => {
+    const files = req.files as { 
+        avatar: Express.Multer.File[],
+        gallary: Express.Multer.File[]
+    }
 
     console.log( 'AVATR',files.avatar)
     console.log('GALLARY', files.gallary)
+    
+    res.json({})
+}
+
+export const uploadFile =async (req:Request, res: Response) => {
+    console.log('FILE', req.file)
+    console.log('FILES', req.files)
     
     res.json({})
 }
