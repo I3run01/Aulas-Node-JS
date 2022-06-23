@@ -17,4 +17,6 @@ Passos de Auntenticação
     -- OAuth2 = Refresh + RefreshToken
     - JWT (Json Web Token)
 
-TOKEN = 123
+
+
+

@@ -46,7 +46,7 @@ Serve para criar um servidor
 12º -> Instalar o dotenv : Serve para configuração de porta
     npm install dotenv
 
-13º -> Instalar o Sequelize : Serve para com promise e Bancps de dados
+13º -> Instalar o Sequelize : Serve para com promise e Bancos de dados
     npm install --save sequelize
 
 14º -> Instalar o MySQL dentro do script
