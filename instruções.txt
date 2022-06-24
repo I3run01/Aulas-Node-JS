@@ -83,6 +83,10 @@ Serve para criar um servidor
     npm install jsonwebtoken
     npm install -D @types/jsonwebtoken
 
+21º Biblioteca para envio de email
+    npm install nodemailer
+    npm install -D @types/nodemailer
+
 
 *Rodar o arquivo: Terminal
     nodemon -e ts, json, mustache local-do-arquivo
