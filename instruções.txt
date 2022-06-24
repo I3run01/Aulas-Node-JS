@@ -87,6 +87,12 @@ Serve para criar um servidor
     npm install nodemailer
     npm install -D @types/nodemailer
 
+22º Instalar o Passport -> Serve para realizar as verificações de login
+    npm install passport
+    npm install -D @types/passport
+    npm install passport-http
+    npm install -D @types/passport-http
+
 
 *Rodar o arquivo: Terminal
     nodemon -e ts, json, mustache local-do-arquivo
