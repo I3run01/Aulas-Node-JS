@@ -1,4 +1,6 @@
 import { Request, Response, NextFunction } from "express"
+import JWT from 'jsonwebtoken'
+import doenv from 'dotenv'
 import { User } from "../models/User"
 
 export  const Auth = {
@@ -7,24 +9,19 @@ export  const Auth = {
 
         //Fazer verificação de auth
         if(req.headers.authorization) {
-            let hash: string = req.headers.authorization.substring(6)
-            let decoded:string = Buffer.from(hash, 'base64').toString()
-            //Decodifica a senha e login no código base64
-            let data: string[] = decoded.split(':')
-
-            if (data.length === 2) {
-                let hasUser = await User.findOne({
-                    where: {
-                        email: data[0],
-                        password: data[1]
-                    }
-                })
-                if (hasUser) {
+           
+            const [authtype, token ] = req.headers.authorization.split(' ')
+            if(authtype === 'Bearer') {
+                try {
+                    JWT.verify(
+                        token, 
+                        process.env.JWT_SECRET_KEY as string
+                    )
                     success = true
-                }
-            }
+                } catch(err) {
 
-            console.log('DECODED', decoded)
+                }           
+            }
         }
 
         if (success) next()
