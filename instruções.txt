@@ -79,6 +79,10 @@ Serve para criar um servidor
     npm install sharp
     npm install -D @types/sharp
 
+20º Biblioteca para JST -> acesso de usuário
+    npm install jsonwebtoken
+    npm install -D @types/jsonwebtoken
+
 
 *Rodar o arquivo: Terminal
     nodemon -e ts, json, mustache local-do-arquivo
