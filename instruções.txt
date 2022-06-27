@@ -92,7 +92,8 @@ Serve para criar um servidor
     npm install -D @types/passport
     npm install passport-http
     npm install -D @types/passport-http
-
+    npm install passport-jwt jsonwebtoken
+    npm install -D @types/passport-jwt @types/jsonwebtoken
 
 *Rodar o arquivo: Terminal
     nodemon -e ts, json, mustache local-do-arquivo
