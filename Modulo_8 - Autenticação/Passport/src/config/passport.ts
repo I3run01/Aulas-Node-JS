@@ -19,6 +19,7 @@ passport.use(new BasicStrategy(async (email, password, done) => {
 
 export const privateRoute = (req: Request, res: Response, next: NextFunction) => {
     const authFunction = passport.authenticate('basic', (err, user) => {
+        req.user = user
         return user ? next() : next(notAuthorizedJson)
     })(req, res, next)
 }
