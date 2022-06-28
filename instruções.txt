@@ -32,9 +32,8 @@
 
 10º -> Instale o Express
 Serve para criar um servidor
-    npm install express
-    npm install @types/express
-
+    
+npm install express @types/express
 11º -> Instalar o Mustache
     npm  install mustache-express
     npm install --save-dev @types/mustache-express
@@ -95,6 +94,18 @@ Serve para criar um servidor
     npm install passport-jwt jsonwebtoken
     npm install -D @types/passport-jwt @types/jsonwebtoken
 
+23º Instalar o Jest -> Biblioteca para realiar testes
+    npm install -D jest ts-jest @types/jest
+
+    npx ts-jest config:init //muda a configuração dos arquivos
+
+    Em jest.config.js -> coloque o seguinte comando:
+        detectOpenHandles: true
+
+    Em package.josn -> script : Habilite o seguinte comando
+        "test": "set NODE_ENV=test& jest --runInBand",
+
+
 *Rodar o arquivo: Terminal
     nodemon -e ts, json, mustache local-do-arquivo
 
@@ -104,3 +115,6 @@ Serve para criar um servidor
 
         Para rodar o comando: No terminal:
             npm run start-dev
+
+*Rodar os testes do sistema
+    npm test
