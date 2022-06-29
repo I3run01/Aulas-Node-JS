@@ -19,12 +19,12 @@ describe('Testing math library', () => {
         expect(response2).toBe(0)
     })
     
-    it('should divide two numbers correctly', () => {
-       const response = Math.div(15,5)
-       expect(response).toBe(3)
-    
-       const response2 = Math.div(3,0)
-       expect(response2).toBe(false)
+    it('should divide two numbers corretly', () => {
+        const response = Math.div(15,5)
+        expect(response).toBe(3)
+
+        const response2 = Math.div(3,0)
+        expect(response2).toBe(false)
     })
 
 })
