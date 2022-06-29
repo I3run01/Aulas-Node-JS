@@ -105,6 +105,9 @@ npm install express @types/express
     Em package.josn -> script : Habilite o seguinte comando
         "test": "set NODE_ENV=test& jest --runInBand",
 
+24º Biclioteca para cryptografar senhas:
+	npm install bcrypt @types/bcrypt 
+
 
 *Rodar o arquivo: Terminal
     nodemon -e ts, json, mustache local-do-arquivo
