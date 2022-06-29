@@ -1,6 +1,28 @@
 import { Math } from './Math'
 
 describe('Testing math library', () => {
+
+
+    //Executa antes de cada teste
+    beforeEach(() => {
+        //bla bla bla
+    })
+
+    //Executa depois de cada teste
+    afterEach(() => {
+        //bla bla bla
+    })
+
+    //executa antes de cada teste  
+    beforeAll(() => {
+        //bla bla bla
+    })
+
+    //executa depois de cada teste
+    afterAll(() => {
+        //bla bla bla
+    })
+
     it('should sun two numbers correctly', () => {
         const response = Math.sum(5, 10)
         expect(response).toBe(15)
