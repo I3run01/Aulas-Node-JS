@@ -1,6 +1,6 @@
 import e, { Request, Response } from 'express';
 import { rmSync } from 'fs';
-import * as UserService from '../services/UserServices'
+import * as UserService from '../services/UserService'
 
 export const ping = (req: Request, res: Response) => {
     res.json({pong: true});
