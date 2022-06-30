@@ -3,7 +3,7 @@ import * as UserService from './UserService'
 
 describe('Testing user service', () => {
 
-    let email = 'test@jest.com'
+    let email = 'test@jeast.com'
     let password = '1234'
 
     beforeAll( async () => {
@@ -38,7 +38,7 @@ describe('Testing user service', () => {
         expect(match).toBeFalsy()
     })
 
-    it('should get a list of users',async () => {
+    it('should get a list of users', async () => {
         const users = await UserService.all()
         expect(User.length).toBeGreaterThanOrEqual(1)
         for(let i in users) {
