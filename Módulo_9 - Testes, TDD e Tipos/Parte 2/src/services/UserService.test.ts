@@ -6,6 +6,7 @@ describe('Testing user service', () => {
     let email = 'test@jeast.com'
     let password = '1234'
 
+    //Vai apagar o banco de dados, se tiver algum criado
     beforeAll( async () => {
         await User.sync({force: true})
     })
@@ -21,6 +22,7 @@ describe('Testing user service', () => {
         const newUser = await UserService.createUser(email, password)
         expect(newUser).toBeInstanceOf(Error)
     })
+    
     it('should find a user by the email',async () => {
         const user = await UserService.findByEmail(email) as UserInstance
         expect(user.email).toBe(email)

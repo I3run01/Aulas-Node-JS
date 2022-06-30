@@ -95,7 +95,6 @@ describe('Testing api routes', () => {
             })
     })
 
-    
     it('should list users', (done) => {
         request(app)
             .get('/list')
