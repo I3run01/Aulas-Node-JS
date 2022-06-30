@@ -13,14 +13,14 @@ export const register = async (req: Request, res: Response) => {
         const newUser = await UserService.createUser(email, password)
 
         if(newUser instanceof Error) {
-            res.json({error: newUser.message})
+            return res.json({error: newUser.message})
         } else {
             res.status(201)
-            res.json( { id: newUser.id})
+            return res.json( { id: newUser.id})
         }
     }
 
-    else res.json({ error: 'E-mail e/ou senha não enviados.' });
+    else return res.json({ error: 'E-mail e/ou senha não enviados.' });
 }
 
 export const login = async (req: Request, res: Response) => {
@@ -31,7 +31,7 @@ export const login = async (req: Request, res: Response) => {
         const user = await UserService.findByEmail(email)
 
         if (user && UserService.matchPassword(password, user.password)) {
-            res.json({ status: true });
+            return res.json({ status: true });
         }
     }
 
@@ -46,5 +46,5 @@ export const list = async (req: Request, res: Response) => {
         list.push( users[i].email );
     }
 
-    res.json({ list });
+    return res.json({ list });
 }
