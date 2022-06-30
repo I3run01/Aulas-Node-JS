@@ -35,7 +35,7 @@ export const login = async (req: Request, res: Response) => {
         }
     }
 
-    else res.json({ status: false });
+    res.json({ status: false });
 }
 
 export const list = async (req: Request, res: Response) => {
