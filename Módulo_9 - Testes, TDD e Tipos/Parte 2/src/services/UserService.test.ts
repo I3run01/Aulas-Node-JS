@@ -40,7 +40,7 @@ describe('Testing user service', () => {
 
     it('should get a list of users', async () => {
         const users = await UserService.all()
-        expect(User.length).toBeGreaterThanOrEqual(1)
+        expect(users.length).toBeGreaterThanOrEqual(1)
         for(let i in users) {
             expect(users[i]).toBeInstanceOf(User)
         }
