@@ -103,10 +103,13 @@ npm install express @types/express
         detectOpenHandles: true
 
     Em package.josn -> script : Habilite o seguinte comando
-        "test": "set NODE_ENV=test& jest --runInBand",
+        "test": "set NODE_ENV=test& jest --runInBand --forceExit",
 
 24º Biclioteca para cryptografar senhas:
 	npm install bcrypt @types/bcrypt 
+
+25º Biblioteca para fazer testes com requisições 
+	npm install -D supertest @types/supertest
 
 
 *Rodar o arquivo: Terminal
