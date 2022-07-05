@@ -16,6 +16,7 @@ let connectedUsers = []
 io.on('connection', (socket)=> {
     console.log("Conexão detectada...")
     
+    
     socket.on('join-request', (username)=> {
         socket.username = username
         connectedUsers.push( username )
@@ -48,6 +49,7 @@ io.on('connection', (socket)=> {
         socket.broadcast.emit('show-msg', obj )
         
     })
+    
     
     
     

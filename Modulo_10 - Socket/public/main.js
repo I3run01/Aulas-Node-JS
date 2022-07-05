@@ -1,5 +1,3 @@
-const { text } = require("express")
-
 const socket = io()
 let username = ''
 let userList = []
@@ -32,7 +30,7 @@ function addMessage(type, user, msg ) {
             ul.innerHTML += `<li class="m-status"> ${msg} </li>`
         break
         case 'msg':
-            ul.innerHTML += `<li class="m-txt"><span> ${user}</span>${msg}</span>`
+            ul.innerHTML += `<li class="m-txt"><span> ${user}: </span>${msg}</span>`
         break
     }
 }
@@ -50,8 +48,6 @@ loginInput.addEventListener('keyup', (e) => {
 })
 
 
-
-
 textInput.addEventListener('keyup', (e) => {
     if(e.keyCode === 13) {
         let txt = textInput.value.trim()
@@ -66,7 +62,8 @@ textInput.addEventListener('keyup', (e) => {
 
 
 
-socket.on('user-ok', (list)=> {
+
+socket.on('user-ok', (list) => {
     loginPage.style.display = 'none'
     chatPage.style.display = 'flex'
     textInput.focus()
@@ -98,5 +95,3 @@ socket.on('list-update', (data) => {
 socket.on('show-msg', (data)=> {
     addMessage('msg', data.username, data.addMessage)
 })
-
-
